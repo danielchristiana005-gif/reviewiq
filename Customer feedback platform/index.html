@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ReviewIQ — Customer Feedback Analytics</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         LOGIN PAGE
+    ========================================================== -->
+
+    <section id="loginPage" class="page login-page">
+
+        <div class="login-promo">
+
+            <div class="promo-content">
+
+                <div class="brand brand-light">
+                    <div class="brand-icon">↗</div>
+                    <div>
+                        <strong>ReviewIQ</strong>
+                        <span>Premium Analytics</span>
+                    </div>
+                </div>
+
+                <div class="promo-main">
+                    <h1>Transform feedback into intelligence.</h1>
+
+                    <p>
+                        ReviewIQ provides enterprise-grade sentiment analysis
+                        and trend forecasting powered by advanced AI.
+                    </p>
+
+                    <div class="promo-stats">
+
+                        <div class="promo-stat">
+                            <span>Total Reviews</span>
+                            <strong>12K+</strong>
+                            <small>↗ Positive trend</small>
+                        </div>
+
+                        <div class="promo-stat">
+                            <span>AI Sentiment</span>
+                            <strong>Positive</strong>
+                            <small>● Healthy</small>
+                        </div>
+
+                        <div class="promo-stat">
+                            <span>Response Rate</span>
+                            <strong>92%</strong>
+                            <small>Average 2h response time</small>
+                        </div>
+
+                    </div>
+
+                    <div class="promo-chart">
+                        <div class="promo-chart-header">
+                            <strong>Performance Insights</strong>
+                            <span>•••</span>
+                        </div>
+
+                        <div class="fake-bars">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                    </div>
+                </div>
+
+                <small class="security-note">
+                    ◇ GDPR Compliant &nbsp; • &nbsp; SOC2 Type II Certified
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="login-form-container">
+
+            <div class="login-form">
+
+                <div class="brand brand-dark">
+                    <div class="brand-icon">↗</div>
+                    <div>
+                        <strong>ReviewIQ</strong>
+                        <span>Premium Analytics</span>
+                    </div>
+                </div>
+
+                <div class="login-heading">
+                    <h2>Welcome Back</h2>
+                    <p>Please enter your credentials to access your dashboard.</p>
+                </div>
+
+                <form id="loginForm">
+
+                    <label for="loginEmail">Work Email</label>
+                    <div class="input-wrapper">
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="name@company.com"
+                            required
+                        >
+                        <span>✉</span>
+                    </div>
+
+                    <label for="loginPassword">Password</label>
+
+                    <div class="input-wrapper">
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="••••••••"
+                            required
+                        >
+                        <button type="button" class="password-toggle" id="passwordToggle">
+                            ◉
+                        </button>
+                    </div>
+
+                    <div class="login-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span>Keep me logged in for 30 days</span>
+                        </label>
+
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="primary-button">
+                        Sign In →
+                    </button>
+
+                </form>
+
+                <div class="or-divider">
+                    <span>OR CONTINUE WITH</span>
+                </div>
+
+                <button class="google-button">
+                    <strong>G</strong>
+                    Google
+                </button>
+
+                <p class="create-account">
+                    Don't have an account?
+                    <a href="#">Create Account</a>
+                </p>
+
+                <div class="legal-links">
+                    <span>Privacy Policy</span>
+                    <span>•</span>
+                    <span>Terms of Service</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         APPLICATION
+    ========================================================== -->
+
+    <section id="appPage" class="application hidden">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <div class="brand-icon">↗</div>
+
+                <div>
+                    <strong>ReviewIQ</strong>
+                    <span>Premium Analytics</span>
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <p class="nav-label">PLATFORM</p>
+
+                <button class="nav-item active" data-page="dashboard">
+                    <span>▦</span>
+                    Dashboard
+                </button>
+
+                <button class="nav-item" data-page="feedback">
+                    <span>▤</span>
+                    Feedback
+                </button>
+
+                <button class="nav-item" data-page="insights">
+                    <span>✦</span>
+                    AI Insights
+                </button>
+
+                <button class="nav-item" data-page="reports">
+                    <span>▥</span>
+                    Reports
+                </button>
+
+                <button class="nav-item" data-page="sources">
+                    <span>♧</span>
+                    Sources
+                </button>
+
+                <button class="nav-item" data-page="settings">
+                    <span>⚙</span>
+                    Settings
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <button class="upgrade-button">
+                    Upgrade Plan
+                </button>
+
+                <button class="logout-button" id="logoutButton">
+                    ↪ &nbsp; Logout
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN APPLICATION AREA -->
+
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <div class="mobile-menu" id="mobileMenu">
+                    ☰
+                </div>
+
+                <div class="global-search">
+                    <span>⌕</span>
+                    <input
+                        type="search"
+                        id="globalSearch"
+                        placeholder="Search feedback, analytics, or customers..."
+                    >
+                </div>
+
+                <div class="topbar-right">
+
+                    <button class="notification-button">
+                        ♧
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="user-profile">
+                        <div class="user-text">
+                            <strong>Toyin Oke</strong>
+                            <small>Admin Account</small>
+                        </div>
+
+                        <div class="avatar">
+                            TO
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =====================================================
+                 DASHBOARD PAGE
+            ====================================================== -->
+
+            <section class="content-page active-page" id="dashboardPage">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h1>Dashboard</h1>
+                        <p>Welcome back. Here's what's happening with your brand today.</p>
+                    </div>
+
+                    <div class="heading-actions">
+
+                        <select class="period-select">
+                            <option>Last 30 Days</option>
+                            <option>Weekly</option>
+                            <option>Monthly</option>
+                            <option>Yearly</option>
+                        </select>
+
+                        <button class="export-button">
+                            ↓ Export
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- KPI CARDS -->
+
+                <div class="kpi-grid">
+
+                    <article class="kpi-card">
+                        <div class="kpi-top">
+                            <span class="kpi-icon">▣</span>
+                            <span class="trend positive">+12.4%</span>
+                        </div>
+
+                        <span class="kpi-label">TOTAL REVIEWS</span>
+                        <strong class="kpi-value" id="totalReviews">1,245</strong>
+
+                        <div class="mini-line"></div>
+                    </article>
+
+
+                    <article class="kpi-card">
+                        <div class="kpi-top">
+                            <span class="kpi-icon">★</span>
+                            <span class="trend positive">+0.2</span>
+                        </div>
+
+                        <span class="kpi-label">AVERAGE RATING</span>
+                        <strong class="kpi-value">4.3</strong>
+
+                        <div class="mini-line"></div>
+                    </article>
+
+
+                    <article class="kpi-card">
+                        <div class="kpi-top">
+                            <span class="kpi-icon">☺</span>
+                            <span class="trend positive">+8.4%</span>
+                        </div>
+
+                        <span class="kpi-label">CUSTOMER SATISFACTION</span>
+                        <strong class="kpi-value">84%</strong>
+
+                        <div class="mini-line"></div>
+                    </article>
+
+
+                    <article class="kpi-card">
+                        <div class="kpi-top">
+                            <span class="kpi-icon">▼</span>
+                            <span class="trend negative">-4.2%</span>
+                        </div>
+
+                        <span class="kpi-label">NEGATIVE REVIEWS</span>
+                        <strong class="kpi-value">12%</strong>
+
+                        <div class="mini-line"></div>
+                    </article>
+
+
+                    <article class="kpi-card">
+                        <div class="kpi-top">
+                            <span class="kpi-icon">✦</span>
+                            <span class="trend positive">+12%</span>
+                        </div>
+
+                        <span class="kpi-label">AI SCORE</span>
+                        <strong class="kpi-value">92%</strong>
+
+                        <div class="mini-line"></div>
+                    </article>
+
+
+                    <article class="kpi-card">
+                        <div class="kpi-top">
+                            <span class="kpi-icon">▣</span>
+                            <span class="trend positive">+8.3%</span>
+                        </div>
+
+                        <span class="kpi-label">THIS MONTH</span>
+                        <strong class="kpi-value">245</strong>
+
+                        <div class="mini-line"></div>
+                    </article>
+
+                </div>
+
+
+                <!-- DASHBOARD CHARTS -->
+
+                <div class="dashboard-grid">
+
+                    <article class="panel trend-panel">
+
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Feedback Trend</h3>
+                                <p>Sentiment analysis over the last 30 days</p>
+                            </div>
+
+                            <select>
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>Monthly</option>
+                            </select>
+                        </div>
+
+                        <div class="chart-container">
+                            <canvas id="feedbackTrendChart"></canvas>
+                        </div>
+
+                    </article>
+
+
+                    <article class="panel source-panel">
+
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Reviews by Source</h3>
+                                <p>Channel distribution percentage</p>
+                            </div>
+                        </div>
+
+                        <div class="donut-container">
+                            <canvas id="sourceChart"></canvas>
+
+                            <div class="donut-center">
+                                <strong>1.2k</strong>
+                                <span>TOTAL</span>
+                            </div>
+                        </div>
+
+                        <div class="source-list">
+
+                            <div>
+                                <span><i class="source-dot google"></i> Google Reviews</span>
+                                <strong>58%</strong>
+                            </div>
+
+                            <div>
+                                <span><i class="source-dot facebook"></i> Facebook</span>
+                                <strong>24%</strong>
+                            </div>
+
+                            <div>
+                                <span><i class="source-dot website"></i> Direct Website</span>
+                                <strong>12%</strong>
+                            </div>
+
+                            <div>
+                                <span><i class="source-dot other"></i> Other</span>
+                                <strong>6%</strong>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- RECENT FEEDBACK -->
+
+                <article class="panel recent-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <h3>Recent Feedback</h3>
+                            <p>Latest customer reviews from all sources</p>
+                        </div>
+
+                        <button class="text-button" data-page="feedback">
+                            View All →
+                        </button>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="feedback-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Review</th>
+                                    <th>Rating</th>
+                                    <th>Source</th>
+                                    <th>Sentiment</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="recentFeedbackTable">
+
+                                <tr>
+                                    <td>
+                                        <div class="customer">
+                                            <div class="small-avatar">TO</div>
+                                            <div>
+                                                <strong>Toyin Oke</strong>
+                                                <small>Lagos, Nigeria</small>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="review-text">
+                                            The customer service was absolutely...
+                                        </span>
+                                    </td>
+
+                                    <td>★★★★★</td>
+
+                                    <td>Website</td>
+
+                                    <td>
+                                        <span class="status positive-status">
+                                            Positive
+                                        </span>
+                                    </td>
+
+                                    <td>Aug 12, 2026</td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <div class="customer">
+                                            <div class="small-avatar">UH</div>
+                                            <div>
+                                                <strong>Usuf Hassan</strong>
+                                                <small>Abuja, Nigeria</small>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="review-text">
+                                            Decent product but the packaging was slightly...
+                                        </span>
+                                    </td>
+
+                                    <td>★★★★☆</td>
+
+                                    <td>Google</td>
+
+                                    <td>
+                                        <span class="status neutral-status">
+                                            Neutral
+                                        </span>
+                                    </td>
+
+                                    <td>Aug 11, 2026</td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <div class="customer">
+                                            <div class="small-avatar">OF</div>
+                                            <div>
+                                                <strong>Okoro Faith</strong>
+                                                <small>Lagos, Nigeria</small>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="review-text">
+                                            I'm disappointed with the latest software update...
+                                        </span>
+                                    </td>
+
+                                    <td>★★☆☆☆</td>
+
+                                    <td>Facebook</td>
+
+                                    <td>
+                                        <span class="status negative-status">
+                                            Negative
+                                        </span>
+                                    </td>
+
+                                    <td>Aug 11, 2026</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =====================================================
+                 FEEDBACK MANAGEMENT
+            ====================================================== -->
+
+            <section class="content-page" id="feedbackPage">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h1>Feedback Management</h1>
+                        <p>Track, analyze, and respond to your customer voice in real-time.</p>
+                    </div>
+
+                    <div class="heading-actions">
+                        <button class="secondary-button" id="filterButton">
+                            ☰ Filter
+                        </button>
+
+                        <button class="export-button">
+                            ↓ Export
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div class="filter-bar hidden" id="filterBar">
+
+                    <select id="sourceFilter">
+                        <option value="all">All Sources</option>
+                        <option value="Website">Website</option>
+                        <option value="Google">Google</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Instagram">Instagram</option>
+                    </select>
+
+                    <select id="sentimentFilter">
+                        <option value="all">All Sentiments</option>
+                        <option value="Positive">Positive</option>
+                        <option value="Neutral">Neutral</option>
+                        <option value="Negative">Negative</option>
+                    </select>
+
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="Product Quality">Product Quality</option>
+                        <option value="Delivery">Delivery</option>
+                        <option value="Customer Service">Customer Service</option>
+                        <option value="UX Design">UX Design</option>
+                    </select>
+
+                </div>
+
+
+                <article class="panel full-table-panel">
+
+                    <div class="table-wrapper">
+
+                        <table class="feedback-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Reviewer</th>
+                                    <th>Review Content</th>
+                                    <th>Rating</th>
+                                    <th>Sentiment</th>
+                                    <th>Category</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="feedbackTableBody">
+
+                                <tr data-source="Website" data-sentiment="Positive" data-category="Product Quality">
+                                    <td>
+                                        <div class="customer">
+                                            <div class="small-avatar">MB</div>
+                                            <div>
+                                                <strong>Musa Bello</strong>
+                                                <small>Website</small>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        The product quality exceeded my expectations.
+                                    </td>
+
+                                    <td>★★★★★</td>
+
+                                    <td>
+                                        <span class="status positive-status">Positive</span>
+                                    </td>
+
+                                    <td>Product Quality</td>
+
+                                    <td>
+                                        <span class="status replied-status">Replied</span>
+                                    </td>
+
+                                    <td>Aug 12, 2026</td>
+                                </tr>
+
+
+                                <tr data-source="Website" data-sentiment="Neutral" data-category="UX Design">
+                                    <td>
+                                        <div class="customer">
+                                            <div class="small-avatar">CO</div>
+                                            <div>
+                                                <strong>Cynthia Okafor</strong>
+                                                <small>Website</small>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        The dashboard layout is clean but could be more customizable.
+                                    </td>
+
+                                    <td>★★★★☆</td>
+
+                                    <td>
+                                        <span class="status neutral-status">Neutral</span>
+                                    </td>
+
+                                    <td>UX Design</td>
+
+                                    <td>
+                                        <span class="status pending-status">Pending</span>
+                                    </td>
+
+                                    <td>Aug 12, 2026</td>
+                                </tr>
+
+
+                                <tr data-source="Google" data-sentiment="Negative" data-category="Customer Service">
+                                    <td>
+                                        <div class="customer">
+                                            <div class="small-avatar">DJ</div>
+                                            <div>
+                                                <strong>David James</strong>
+                                                <small>Google</small>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        Customer support took too long to respond.
+                                    </td>
+
+                                    <td>★★☆☆☆</td>
+
+                                    <td>
+                                        <span class="status negative-status">Negative</span>
+                                    </td>
+
+                                    <td>Customer Service</td>
+
+                                    <td>
+                                        <span class="status pending-status">Pending</span>
+                                    </td>
+
+                                    <td>Aug 12, 2026</td>
+                                </tr>
+
+
+                                <tr data-source="Instagram" data-sentiment="Positive" data-category="Product Quality">
+                                    <td>
+                                        <div class="customer">
+                                            <div class="small-avatar">BD</div>
+                                            <div>
+                                                <strong>Boma Davies</strong>
+                                                <small>Instagram</small>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        Excellent product. The quality is impressive.
+                                    </td>
+
+                                    <td>★★★★★</td>
+
+                                    <td>
+                                        <span class="status positive-status">Positive</span>
+                                    </td>
+
+                                    <td>Product Quality</td>
+
+                                    <td>
+                                        <span class="status replied-status">Replied</span>
+                                    </td>
+
+                                    <td>Aug 12, 2026</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <div class="pagination">
+                        <span>Showing 1–4 entries</span>
+
+                        <div>
+                            <button>‹</button>
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>…</button>
+                            <button>›</button>
+                        </div>
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =====================================================
+                 AI INSIGHTS
+            ====================================================== -->
+
+            <section class="content-page" id="insightsPage">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h1>AI Insights</h1>
+                        <p>Turn customer feedback into actionable intelligence.</p>
+
+                        <div class="ai-model">
+                            ✦ Model: Feedback Analysis
+                            <span>Last updated: just now</span>
+                        </div>
+                    </div>
+
+                    <button class="secondary-button" id="refreshInsights">
+                        ↻ Refresh Insights
+                    </button>
+
+                </div>
+
+
+                <div class="insights-grid">
+
+                    <article class="panel sentiment-card">
+
+                        <div class="panel-heading">
+                            <h3>Overall Sentiment</h3>
+                            <span>•••</span>
+                        </div>
+
+                        <div class="sentiment-circle">
+                            <div>
+                                <span>☺</span>
+                                <strong>84%</strong>
+                                <small>POSITIVE</small>
+                            </div>
+                        </div>
+
+                        <div class="sentiment-breakdown">
+
+                            <div>
+                                <strong>84%</strong>
+                                <span>Positive</span>
+                            </div>
+
+                            <div>
+                                <strong>9%</strong>
+                                <span>Neutral</span>
+                            </div>
+
+                            <div>
+                                <strong>7%</strong>
+                                <span>Negative</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="panel executive-card">
+
+                        <div class="panel-heading">
+                            <h3>▤ AI Executive Summary</h3>
+                        </div>
+
+                        <p>
+                            Customer satisfaction increased to 84%.
+                            Product quality remains the highest-rated category,
+                            while delivery received the most complaints.
+                        </p>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-footer">
+                            <div class="ai-avatar">✦</div>
+                            <button class="text-button">Download Report ↓</button>
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="insight-small-grid">
+
+                    <article class="panel insight-box">
+
+                        <h3>⌁ Top Complaints</h3>
+
+                        <div class="insight-item">
+                            <div>
+                                <strong>Delivery Speed</strong>
+                                <small>Most mentioned complaint</small>
+                            </div>
+
+                            <b class="negative-text">High</b>
+                        </div>
+
+                        <div class="insight-item">
+                            <div>
+                                <strong>Website Performance</strong>
+                                <small>Needs attention</small>
+                            </div>
+
+                            <b class="negative-text">Medium</b>
+                        </div>
+
+                    </article>
+
+
+                    <article class="panel insight-box">
+
+                        <h3>♥ Most Loved Areas</h3>
+
+                        <div class="progress-item">
+                            <div>
+                                <span>Product Quality</span>
+                                <strong>92%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <i style="width:92%"></i>
+                            </div>
+                        </div>
+
+                        <div class="progress-item">
+                            <div>
+                                <span>Customer Service</span>
+                                <strong>85%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <i style="width:85%"></i>
+                            </div>
+                        </div>
+
+                        <div class="progress-item">
+                            <div>
+                                <span>Overall Experience</span>
+                                <strong>84%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <i style="width:84%"></i>
+                            </div>
+                        </div>
+
+                    </article>
+
+
+                    <article class="panel insight-box">
+
+                        <h3>Emotion Analysis</h3>
+
+                        <div class="emotion">
+                            <span>☺ Joy</span>
+                            <div class="progress">
+                                <i style="width:65%"></i>
+                            </div>
+                            <strong>65%</strong>
+                        </div>
+
+                        <div class="emotion">
+                            <span>● Neutral</span>
+                            <div class="progress">
+                                <i style="width:22%"></i>
+                            </div>
+                            <strong>22%</strong>
+                        </div>
+
+                        <div class="emotion">
+                            <span>● Frustrated</span>
+                            <div class="progress">
+                                <i style="width:13%"></i>
+                            </div>
+                            <strong>13%</strong>
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- AI RECOMMENDATIONS -->
+
+                <article class="ai-recommendations">
+
+                    <div class="ai-rec-header">
+
+                        <div class="ai-rec-icon">✦</div>
+
+                        <div>
+                            <h2>AI Recommendations</h2>
+                            <p>Actionable insights to improve business performance</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="recommendation-grid">
+
+                        <div class="recommendation">
+                            <span>⚡</span>
+
+                            <div>
+                                <h3>Improve Delivery Speed</h3>
+                                <p>
+                                    Delivery received the highest number of complaints.
+                                    Review delivery processes and customer expectations.
+                                </p>
+                            </div>
+
+                            <b>→</b>
+                        </div>
+
+
+                        <div class="recommendation">
+                            <span>▤</span>
+
+                            <div>
+                                <h3>Optimise Website Performance</h3>
+                                <p>
+                                    Improve website performance and reduce friction
+                                    points identified through customer feedback.
+                                </p>
+                            </div>
+
+                            <b>→</b>
+                        </div>
+
+
+                        <div class="recommendation">
+                            <span>✦</span>
+
+                            <div>
+                                <h3>Maintain Product Quality</h3>
+                                <p>
+                                    Product quality remains the highest-rated area.
+                                    Continue monitoring customer sentiment.
+                                </p>
+                            </div>
+
+                            <b>→</b>
+                        </div>
+
+
+                        <div class="recommendation">
+                            <span>♡</span>
+
+                            <div>
+                                <h3>Monitor Customer Sentiment</h3>
+                                <p>
+                                    Track sentiment changes regularly and respond
+                                    quickly when negative feedback increases.
+                                </p>
+                            </div>
+
+                            <b>→</b>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =====================================================
+                 REPORTS
+            ====================================================== -->
+
+            <section class="content-page" id="reportsPage">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h1>Business Reports</h1>
+                        <p>Performance analysis and customer feedback reports.</p>
+                    </div>
+
+                    <div class="report-controls">
+
+                        <div class="period-tabs">
+                            <button>Weekly</button>
+                            <button class="active">Monthly</button>
+                            <button>Yearly</button>
+                        </div>
+
+                        <button class="date-button">
+                            ▣ Last 30 Days
+                        </button>
+
+                        <button class="export-button">
+                            PDF
+                        </button>
+
+                        <button class="export-button">
+                            Excel
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-summary-grid">
+
+                    <article class="panel report-summary">
+
+                        <h3>✦ AI Executive Summary</h3>
+
+                        <p>
+                            Customer satisfaction is currently at 84%.
+                            Product quality remains the highest-rated area,
+                            while delivery continues to receive the most complaints.
+                        </p>
+
+                    </article>
+
+
+                    <article class="ai-action-card">
+
+                        <span>AI Recommendation</span>
+
+                        <h3>Focus on improving delivery speed.</h3>
+
+                        <p>
+                            Delivery feedback should be prioritised for the next
+                            improvement cycle.
+                        </p>
+
+                        <button>View Action Plan</button>
+
+                    </article>
+
+                </div>
+
+
+                <div class="report-kpis">
+
+                    <div>
+                        <span>Total Reviews</span>
+                        <strong>1,245</strong>
+                        <small>+12%</small>
+                    </div>
+
+                    <div>
+                        <span>Avg Rating</span>
+                        <strong>4.3 ★</strong>
+                    </div>
+
+                    <div>
+                        <span>Sentiment</span>
+                        <strong>84%</strong>
+                        <small>Positive</small>
+                    </div>
+
+                    <div>
+                        <span>Review Volume</span>
+                        <strong>245</strong>
+                        <small>/ month</small>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-grid report-charts">
+
+                    <article class="panel">
+
+                        <div class="panel-heading">
+                            <h3>Feedback Trend</h3>
+                            <span>•••</span>
+                        </div>
+
+                        <div class="chart-container">
+                            <canvas id="reportTrendChart"></canvas>
+                        </div>
+
+                    </article>
+
+
+                    <article class="panel">
+
+                        <div class="panel-heading">
+                            <h3>Sentiment Distribution</h3>
+                        </div>
+
+                        <div class="chart-container">
+                            <canvas id="reportSentimentChart"></canvas>
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="report-bottom-grid">
+
+                    <article class="panel">
+
+                        <h3>Reviews by Category</h3>
+
+                        <div class="category-progress">
+
+                            <div>
+                                <span>Product Quality</span>
+                                <strong>Highest rated</strong>
+                            </div>
+
+                            <div class="progress">
+                                <i style="width:92%"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="category-progress">
+
+                            <div>
+                                <span>Customer Service</span>
+                                <strong>High</strong>
+                            </div>
+
+                            <div class="progress">
+                                <i style="width:85%"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="category-progress">
+
+                            <div>
+                                <span>Delivery</span>
+                                <strong>Needs attention</strong>
+                            </div>
+
+                            <div class="progress">
+                                <i style="width:55%"></i>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="panel">
+
+                        <h3>Top Positive Areas</h3>
+
+                        <ul class="simple-list">
+                            <li>✓ Product Quality</li>
+                            <li>✓ Customer Service</li>
+                            <li>✓ Overall Experience</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="panel">
+
+                        <h3>Top Complaint Areas</h3>
+
+                        <ul class="simple-list complaint-list">
+                            <li>! Delivery Speed</li>
+                            <li>! Website Performance</li>
+                            <li>! Service Friction</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 SOURCES
+            ====================================================== -->
+
+            <section class="content-page" id="sourcesPage">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h1>Feedback Sources</h1>
+                        <p>Monitor where your customer feedback is coming from.</p>
+                    </div>
+
+                    <button class="export-button">
+                        + Connect Source
+                    </button>
+
+                </div>
+
+
+                <div class="source-cards">
+
+                    <article class="source-card">
+                        <div class="source-large-icon">G</div>
+                        <h3>Google Reviews</h3>
+                        <p>Customer reviews from Google Business Profile.</p>
+                        <strong>Connected</strong>
+                    </article>
+
+                    <article class="source-card">
+                        <div class="source-large-icon">f</div>
+                        <h3>Facebook</h3>
+                        <p>Customer comments and mentions from Facebook.</p>
+                        <strong>Connected</strong>
+                    </article>
+
+                    <article class="source-card">
+                        <div class="source-large-icon">◎</div>
+                        <h3>Instagram</h3>
+                        <p>Social mentions and customer comments.</p>
+                        <strong>Connected</strong>
+                    </article>
+
+                    <article class="source-card">
+                        <div class="source-large-icon">⌂</div>
+                        <h3>Website</h3>
+                        <p>Feedback submitted directly through ReviewIQ.</p>
+                        <strong>Active</strong>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 SETTINGS
+            ====================================================== -->
+
+            <section class="content-page" id="settingsPage">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h1>Settings</h1>
+                        <p>Manage your business, team, AI and account settings.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-layout">
+
+                    <aside class="settings-menu">
+
+                        <h3>Platform</h3>
+
+                        <button class="settings-tab active">
+                            ▣ Business Profile
+                        </button>
+
+                        <button class="settings-tab">
+                            ♙ Team Members
+                        </button>
+
+                        <button class="settings-tab">
+                            ♧ Notifications
+                        </button>
+
+                        <button class="settings-tab">
+                            ◉ Security
+                        </button>
+
+                        <button class="settings-tab">
+                            ✦ AI Settings
+                        </button>
+
+                        <h3>Billing & Access</h3>
+
+                        <button class="settings-tab">
+                            ⚿ API Keys
+                        </button>
+
+                        <button class="settings-tab">
+                            ▣ Subscription
+                        </button>
+
+                        <button class="settings-tab">
+                            ▤ Billing
+                        </button>
+
+                    </aside>
+
+
+                    <div class="settings-content">
+
+                        <article class="settings-section">
+
+                            <h2>Business Profile</h2>
+
+                            <p>
+                                Manage your public business identity and basic details.
+                            </p>
+
+                            <div class="form-grid">
+
+                                <div>
+                                    <label>Business Name</label>
+                                    <input type="text" value="Acme Corp Global">
+                                </div>
+
+                                <div>
+                                    <label>Website URL</label>
+                                    <input type="url" value="https://acme-global.com">
+                                </div>
+
+                            </div>
+
+
+                            <label>Industry</label>
+
+                            <select>
+                                <option>SaaS & Technology</option>
+                                <option>Retail</option>
+                                <option>Financial Services</option>
+                                <option>Healthcare</option>
+                            </select>
+
+                            <button class="primary-button save-button">
+                                Save Changes
+                            </button>
+
+                        </article>
+
+
+                        <article class="settings-section">
+
+                            <h2>Team Members</h2>
+
+                            <p>Invite and manage roles for your workspace.</p>
+
+                            <div class="team-member">
+                                <div class="small-avatar">SV</div>
+
+                                <div>
+                                    <strong>Sarah Vance</strong>
+                                    <small>sarah@acme.com</small>
+                                </div>
+
+                                <span class="role">Admin</span>
+                                <span class="active-label">● Active</span>
+                            </div>
+
+
+                            <div class="team-member">
+                                <div class="small-avatar">MK</div>
+
+                                <div>
+                                    <strong>Marcus Kane</strong>
+                                    <small>marcus@acme.com</small>
+                                </div>
+
+                                <span class="role">Editor</span>
+                                <span class="active-label">● Active</span>
+                            </div>
+
+                        </article>
+
+
+                        <article class="settings-section">
+
+                            <h2>AI Settings</h2>
+
+                            <p>
+                                Fine-tune the intelligence engine for your specific domain.
+                            </p>
+
+                            <div class="setting-row">
+
+                                <div>
+                                    <strong>Auto-reply suggestions</strong>
+                                    <small>
+                                        Enable generative AI to draft initial review responses.
+                                    </small>
+                                </div>
+
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                </label>
+
+                            </div>
+
+
+                            <div class="setting-row">
+
+                                <div>
+                                    <strong>Sentiment sensitivity</strong>
+                                    <small>
+                                        Choose how sensitive sentiment detection should be.
+                                    </small>
+                                </div>
+
+                                <span class="precision-badge">
+                                    High Precision
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="settings-section subscription-section">
+
+                            <h2>Subscription</h2>
+
+                            <div class="subscription-card">
+
+                                <div class="subscription-icon">☆</div>
+
+                                <div>
+                                    <strong>Premium Plan</strong>
+                                    <p>Advanced analytics and AI insights.</p>
+                                </div>
+
+                                <button class="secondary-button">
+                                    Manage Billing
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </section>
+
+
+    <!-- =========================================================
+         CUSTOMER FEEDBACK PAGE
+    ========================================================== -->
+
+    <section id="customerFeedbackPage" class="customer-feedback-page hidden">
+
+        <div class="customer-form-card">
+
+            <div class="customer-brand">
+                <div class="brand-icon">↗</div>
+
+                <div>
+                    <strong>ReviewIQ</strong>
+                    <span>Premium Analytics</span>
+                </div>
+            </div>
+
+
+            <div class="customer-heading">
+
+                <h1>Tell us about your experience</h1>
+
+                <p>
+                    Your honest feedback helps us improve our products and services.
+                </p>
+
+            </div>
+
+
+            <form id="feedbackForm">
+
+                <div class="form-grid">
+
+                    <div>
+                        <label for="customerName">Name <small>(Optional)</small></label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="John Doe"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="customerEmail">Email <small>(Optional)</small></label>
+
+                        <input
+                            type="email"
+                            id="customerEmail"
+                            placeholder="johndoe@gmail.com"
+                        >
+                    </div>
+
+                </div>
+
+
+                <label for="productService">Product / Service</label>
+
+                <select id="productService" required>
+
+                    <option value="">
+                        Select a product or service
+                    </option>
+
+                    <option value="Product">
+                        Product
+                    </option>
+
+                    <option value="Service">
+                        Service
+                    </option>
+
+                    <option value="Website">
+                        Website
+                    </option>
+
+                </select>
+
+
+                <div class="rating-section">
+
+                    <label>Overall Rating</label>
+
+                    <div class="star-rating" id="starRating">
+
+                        <button type="button" data-rating="1">☆</button>
+                        <button type="button" data-rating="2">☆</button>
+                        <button type="button" data-rating="3">☆</button>
+                        <button type="button" data-rating="4">☆</button>
+                        <button type="button" data-rating="5">☆</button>
+
+                    </div>
+
+                    <input
+                        type="hidden"
+                        id="selectedRating"
+                        value="0"
+                    >
+
+                </div>
+
+
+                <label for="feedbackCategory">What can we improve?</label>
+
+                <select id="feedbackCategory" required>
+
+                    <option value="">
+                        Select a category
+                    </option>
+
+                    <option value="Product Quality">
+                        Product Quality
+                    </option>
+
+                    <option value="Delivery">
+                        Delivery
+                    </option>
+
+                    <option value="Customer Service">
+                        Customer Service
+                    </option>
+
+                    <option value="UX Design">
+                        UX Design
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <div class="comment-label">
+
+                    <label for="feedbackComment">
+                        Your Comments
+                    </label>
+
+                    <span>
+                        <span id="characterCount">0</span> / 500
+                    </span>
+
+                </div>
+
+
+                <textarea
+                    id="feedbackComment"
+                    maxlength="500"
+                    placeholder="Please share your thoughts..."
+                    required
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="primary-button feedback-submit"
+                >
+                    Submit Feedback →
+                </button>
+
+
+                <p class="terms-text">
+                    By submitting, you agree to our Terms of Service.
+                </p>
+
+            </form>
+
+        </div>
+
+
+        <!-- THANK YOU MODAL -->
+
+        <div class="thank-you-modal hidden" id="thankYouModal">
+
+            <div class="modal-overlay"></div>
+
+            <div class="thank-you-card">
+
+                <div class="success-icon">✓</div>
+
+                <h2>Thank you!</h2>
+
+                <p>
+                    We appreciate your honesty. Your feedback has been sent
+                    to our team for review.
+                </p>
+
+                <button
+                    class="secondary-button"
+                    id="submitAnother"
+                >
+                    Submit another
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
